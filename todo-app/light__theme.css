@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* ### Primary  */
+        --BrightBlue: hsl(220, 98%, 61%);
+        --CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+        /* ### Light Theme  */
+        --VeryLightGray: hsl(0, 0%, 98%);
+        --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+        --LightGrayishBlue: hsl(233, 11%, 84%);
+        --DarkGrayishBlue: hsl(236, 9%, 61%);
+        --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+}
+.body__light{
+    background-color: var(--VeryLightGray);
+}
+.radio__box__ligth{
+    background-color: var(--VeryLightGrayishBlue);
+}
+.input__task__ligth{
+    background-color: var(--VeryLightGrayishBlue);
+    color: var(--VeryDarkGrayishBlue)
+}
+.tasks__con__ligth{
+    background-color: var(--VeryLightGrayishBlue);
+}
+.text__con__ligth{
+    background-color: var(--VeryLightGrayishBlue);
+    color: var(--VeryDarkGrayishBlue)
+}
+.console__ligth{
+    background-color: var(--VeryLightGrayishBlue);
+    
+}
+.btn__items__light{
+color: var(--VeryDarkGrayishBlue)
+}

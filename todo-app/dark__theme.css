@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+/* ### Primary  */
+--BrightBlue: hsl(220, 98%, 61%);
+--CheckBackground:  hsl(280, 87%, 65%); 
+--FONT: 'Josefin Sans';
+
+/* ### Dark Theme */
+--VeryDarkBlue: hsl(235, 21%, 11%);
+--VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+--LightGrayishBlue: hsl(234, 39%, 85%);
+--LightGrayishBlueHover: hsl(236, 33%, 92%);
+--DarkGrayishBlue: hsl(234, 11%, 52%);
+--VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+--VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+}
+
+body{
+    background-image: url(images/bg-desktop-dark.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% ;
+    background-color: var(--VeryDarkBlue);
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    height: 100vh;
+    
+   
+}
+.main__con{
+    display: flex;
+    height: 95vh;
+    width: 85vmin;
+    max-width: 100%;
+    background-color: transparent;
+    flex-direction: column;
+    padding: 1em;
+    margin-top: 3em;
+    border-radius: 10px;
+}
+.header{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: transparent;
+}
+.header__text{
+    letter-spacing: 15px;
+    margin: 0;
+    font-family: var(--FONT);
+    color: white;
+    font-size: 7vmin;
+}
+.input{
+    margin-block: 6vmin;
+    display: flex;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    border-radius: 10PX;
+}
+.img{
+    width: 6vmin;
+    height: 6vmin;
+
+}
+.radio__box{
+    height: 7vmin;
+    width: 9%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-radius: 10px;
+}
+.radio{
+    border-radius: 50%;
+    width: 46%;
+    height: 45%;
+    border: 0.2vmin solid var(--DarkGrayishBlue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.radio__img{
+    width: 40%;
+    filter: brightness(3) contrast(2);
+}
+.input__task{
+    background-color: var(--VeryDarkDesaturatedBlue);
+    border: transparent;
+    width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 2.8vmin;
+    font-family: var(--FONT
+    );
+    font-weight: 100;
+    color: var(--LightGrayishBlue);
+    padding: .23vw;
+}
+.input__task:focus{
+    outline: none;
+}
+.tasks__con{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    border-radius: 10px;
+   
+}
+.task{
+    display: flex;
+    flex-direction: row;
+    height: 7vmin;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    border-bottom: 1px solid var(--DarkGrayishBlue);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.text__con{
+    width: 91%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--FONT);
+    color: var(--LightGrayishBlue);
+    font-size: 3vmin;
+    padding: 0.3em;
+    padding-top: 0.5em;
+    
+    
+}
+.task__list{
+        width: 42%;
+        height: 44%;
+        
+} 
+.cross{
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    position: relative;
+    top: 2vmin;
+}
+
+.task__list:hover{
+    cursor: pointer;
+    border: 2px solid  var(--CheckBackground);
+}
+.last{
+    border: none;
+}
+.console{
+    width: 100%;
+    height: auto;
+    background-color: var(--VeryDarkDesaturatedBlue);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.btn__items{
+    background-color: transparent;
+    border: none;
+    margin-left: 1em;
+    margin-block: 0.9em;
+    font-size: 2vmin;
+    font-family: var(--FONT);
+    color: var(--DarkGrayishBlue);
+
+}
+.btn__status:hover{
+    color: var(--LightGrayishBlueHover);
+    cursor: pointer;
+}
+.btn__status{
+    margin-right: 1em;
+}.btn__status__click{
+    margin-inline: 0.1;
+}
+.text__footer{
+        color: var(--DarkGrayishBlue);
+        text-align: center;
+        font-family: var(--FONT);
+        font-size: 1.5vmin;
+        margin-right:3.7vw;
+}
+.radio__active{
+    background-color: hsl(192, 100%, 67%);
+    border: 2px solid var(--CheckBackground);
+}
+.textCon__active{
+    text-Decoration: line-through;
+    color: var(--DarkGrayishBlue);
+}
+.task__done{
+    opacity: 1;
+}
+
+@media (max-width: 600px){
+    body{
+        height: 100vh;
+        background-size: 100vh 20vh;
+        
+    }
+    .main__con {
+        margin-top: 0;
+        height: 85vh;
+    }
+    .check{
+        width: 1vw;
+    }
+        .cross{
+            height: 27px;
+            width: 27px;
+        }
+}
