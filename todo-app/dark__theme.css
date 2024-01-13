@@ -83,6 +83,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+
 .radio__img{
     width: 40%;
     filter: brightness(3) contrast(2);
@@ -149,7 +150,7 @@ body{
 
 .task__list:hover{
     cursor: pointer;
-    border: 2px solid  var(--CheckBackground);
+    border: 1px solid hsl(192, 100%, 67%);
 }
 .last{
     border: none;
@@ -188,6 +189,7 @@ body{
         font-family: var(--FONT);
         font-size: 1.5vmin;
         margin-right:3.7vw;
+        margin-top: 2vh;
 }
 .radio__active{
     background-color: hsl(192, 100%, 67%);
@@ -200,6 +202,13 @@ body{
 .task__done{
     opacity: 1;
 }
+.dragstart{
+    opacity: 0.9;
+}
+.dragover{
+    opacity: 1;
+}
+
 
 @media (max-width: 600px){
     body{

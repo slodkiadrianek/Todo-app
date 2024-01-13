@@ -7,6 +7,8 @@ const inputTask = document.querySelector('.input__task')
 const taskCon = document.querySelector('.tasks__con')
 const console = document.querySelector('.console')
 const btnItems = document.querySelectorAll('.btn__items')
+const textFooter = document.querySelector('.text__footer')
+
 
 
 
@@ -23,6 +25,7 @@ img.addEventListener('click', function(e){
     btnItems.forEach(el=>{
         el.classList.toggle('btn__items__light')
     })
+    textFooter.classList.toggle('btn__items__light')
 })
 
 const number = document.querySelector('.number')
@@ -31,7 +34,7 @@ const number = document.querySelector('.number')
 let x = 0
 function createNewTask(){   
     let htmlElement = `
-                <div class="task">
+                <div class="task" draggable="true">
                     <div class="radio__box ">
                         <div class="radio task__list" > <img  class="check" src="images/icon-check.svg" alt=""></div>
                     </div>
@@ -52,6 +55,7 @@ const complited = document.querySelector('.complited')
 const active = document.querySelector('.active')
 const alla  = document.querySelector('.alla')
 const clearAll  = document.querySelector('.clear__all')
+const cross = document.querySelector('.cross')
 
 active.addEventListener('click', function(){
     if(task.classList.contains('task__done')){
@@ -95,16 +99,21 @@ radio.addEventListener('click',function(e){
         counter()
     }
 })
+cross.addEventListener('click', function(){
+    task.remove();
+     x--
+    counter()
+})
 
 function change(){
     if(console.classList.contains('console__ligth')){
     textCon.classList.add('text__con__ligth')
     task.classList.add('text__con__ligth')
-
-   
+    radio.classList.add('radio__light') 
 }else{
      textCon.classList.remove('text__con__ligth')
      task.classList.remove('text__con__ligth')
+     radio.classList.remove('radio__light')
 }
 }
 
@@ -115,10 +124,11 @@ setInterval(el => change(), 1)
 inputTask.addEventListener('keydown' , (e) =>{
     if(e.key === 'Enter'){
         createNewTask()
+        inputTask.value= ''
     }
 })
 
 
-function counter(){
-    number.textContent = x
+function counter(){ 
+   x>=0 ? number.textContent = x :  x= 0 , number.textContent = x
 }

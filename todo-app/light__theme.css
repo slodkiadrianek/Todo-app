@@ -38,3 +38,6 @@
 .btn__items__light{
 color: var(--VeryDarkGrayishBlue)
 }
+.radio__light{
+    border: 1px solid hsl(192, 100%, 67%);
+}
